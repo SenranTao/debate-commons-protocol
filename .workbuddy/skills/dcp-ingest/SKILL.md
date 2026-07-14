@@ -96,7 +96,7 @@ debate-commons-protocol/
 
 **Step 2 — 内容分类**
 
-判断投稿属于哪种资源类型：
+先判断投稿是**什么**（按内容特征分目录），再判断是**谁的**（原创 / curated，通过 frontmatter 的 `source_type` 字段标注）。
 
 | 内容特征 | 归属目录 |
 |----------|----------|
@@ -104,18 +104,24 @@ debate-commons-protocol/
 | 训练方法论 / 练习设计 / 技战术 | `resources/methods/` |
 | 比赛文字转写 / 录音整理 | `resources/transcripts/` |
 | AI 工具使用 / prompt 分享 | `resources/ai-tools/` |
-| 整理的非原创视频（标注来源） | `resources/curated-video/` |
-| 整理的非原创音频（标注来源） | `resources/curated-audio/` |
-| 整理的非原创文字（标注来源） | `resources/curated-text/` |
-| 英语学习方法 / 材料 | `resources/english-learning/` |
-| 辩论议题相关新闻 | `resources/news/` |
-| 辩题 casefile / 证据卡片 | `resources/casefiles/` |
+| 辩题案例文件 / 证据卡片 | `resources/casefiles/` |
+| 英语学习方法 / 材料 / 工具 | `resources/english-learning/` |
+| 辩论议题相关新闻 / 新闻 digest | `resources/news/` |
+| 视频资源的整理/索引 | `resources/curated-video/` |
+| 音频资源的整理/索引 | `resources/curated-audio/` |
+| 文字资源的整理/索引 | `resources/curated-text/` |
 
-**如果投稿内容无法归入以上任何分类** → 暂停，向用户建议新增分类："📁 分类扩展建议：新内容 [描述]，不适配原因 [说明]，建议新增目录 [名称]，需要你确认。"
+> 注：`casefiles`、`english-learning`、`news` 都可以接收原创投稿（如成员自己写的辩题案例、英语学习工具推荐、新闻分析摘要），不限于 curated。
 
-**Step 3 — 非原创内容边界检查（关键）**
+**分类完成后**，确定 `source_type`：
+- 内容是成员自己创作 → `original`
+- 内容是成员筛选/索引/注释他人作品 → `curated`
 
-对于 curatorial 投稿（curated-video / curated-audio / curated-text / news），必须检查：
+**如果投稿内容无法归入以上任何分类** → 暂停，向用户建议新增分类。
+
+**Step 3 — Curatorial 内容边界检查**
+
+对于 `source_type: curated` 的投稿（无论归属哪个目录），必须检查：
 
 1. 资源是否标注了原始来源（URL / 作者 / 发布日期）？
 2. 是否明确区分了"原创贡献"（索引、注释、整理）与"引用内容"？
@@ -217,7 +223,7 @@ license: CC BY-SA 4.0
 
 ### Curatorial 资源额外规则
 
-对于非原创整理的资源（curated-video / curated-audio / curated-text / news），页面 frontmatter 必须额外包含：
+对于 `source_type: curated` 的资源（无论归属哪个目录），页面 frontmatter 必须额外包含：
 
 ```yaml
 curation_notes: "[成员对这份资源的筛选理由、注释、评价]"
