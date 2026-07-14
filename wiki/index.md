@@ -12,12 +12,11 @@ updated: 2026-07-14
 
 - [[protocol/constitution|章程]] — 协议规则（what）
 - [[protocol/operations|运营手册]] — 执行细节（how）
+- [[protocol/future-features|未来功能规划]] — 社群跑起来后激活的复杂机制
 - [[members/_index|成员目录]] — 所有成员及其 Badge 状态
 - [[resources/_index|共享 Database]] — 全部资源索引
 - [[events/_index|赛事与活动]] — 赛事日历
 - [[concepts/_index|概念与方法论]] — 可跨辩题迁移的理论概念
-- [[highlights/monthly/_index|每月精选]] — AI 月选高价值资源
-- [[highlights/weekly/_index|每周精选]] — AI 周选高价值资源
 - [[log|操作日志]] — 关键事件摘要
 - [CONTRIBUTING.md](https://github.com/SenranTao/debate-commons-protocol/blob/main/CONTRIBUTING.md) — 投稿指南（外部链接）
 
