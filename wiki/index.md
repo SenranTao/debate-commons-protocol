@@ -16,6 +16,10 @@ updated: 2026-07-14
 - [[resources/_index|共享 Database]] — 全部资源索引
 - [[events/_index|赛事与活动]] — 赛事日历
 - [[concepts/_index|概念与方法论]] — 可跨辩题迁移的理论概念
+- [[highlights/monthly/_index|每月精选]] — AI 月选高价值资源
+- [[highlights/weekly/_index|每周精选]] — AI 周选高价值资源
+- [[log|操作日志]] — 关键事件摘要
+- [CONTRIBUTING.md](https://github.com/SenranTao/debate-commons-protocol/blob/main/CONTRIBUTING.md) — 投稿指南（外部链接）
 
 ## 本 Wiki 的使用方式
 
