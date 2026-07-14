@@ -31,6 +31,7 @@ wiki/
 
 - 阅读章程：[wiki/protocol/constitution.md](wiki/protocol/constitution.md)
 - 阅读运营手册：[wiki/protocol/operations.md](wiki/protocol/operations.md)
+- 投稿指南：[CONTRIBUTING.md](CONTRIBUTING.md)
 - 查看成员目录：[wiki/members/_index.md](wiki/members/_index.md)
 
 ## 当前状态
